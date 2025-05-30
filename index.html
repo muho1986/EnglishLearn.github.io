@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Accent Mastery: Zero to Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+            color: #334155; /* Darker text */
+        }
+        .section-heading {
+            border-bottom: 2px solid #cbd5e1; /* Light gray border */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .audio-player {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            background-color: #e2e8f0; /* Lighter gray background */
+            border-radius: 0.5rem;
+        }
+        .audio-player button {
+            background-color: #3b82f6; /* Blue button */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .audio-player button:hover {
+            background-color: #2563eb; /* Darker blue on hover */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 shadow-lg rounded-b-xl">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-4xl font-extrabold mb-4 md:mb-0">American Accent Mastery</h1>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-4 text-lg font-medium">
+                    <li><a href="#home" class="hover:text-blue-200 transition duration-300">Home</a></li>
+                    <li><a href="#phonetics" class="hover:text-blue-200 transition duration-300">Phonetics</a></li>
+                    <li><a href="#intonation" class="hover:text-blue-200 transition duration-300">Intonation</a></li>
+                    <li><a href="#connected-speech" class="hover:text-blue-200 transition duration-300">Connected Speech</a></li>
+                    <li><a href="#challenges" class="hover:text-blue-200 transition duration-300">Challenges</a></li>
+                    <li><a href="#practice" class="hover:text-blue-200 transition duration-300">Practice</a></li>
+                    <li><a href="#resources" class="hover:text-blue-200 transition duration-300">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 mt-8">
+
+        <section id="home" class="bg-blue-100 p-8 rounded-xl shadow-md text-center mb-12">
+            <h2 class="text-5xl font-bold text-blue-700 mb-6">Your Journey from Zero to Hero!</h2>
+            <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                Welcome to the ultimate guide for mastering the American English accent. Whether you're a complete beginner or looking to refine your pronunciation, our comprehensive lessons and practical exercises will help you speak with confidence and clarity. Let's start your transformation today!
+            </p>
+            <button onclick="scrollToSection('phonetics')" class="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105">
+                Start Learning Now!
+            </button>
+        </section>
+
+        <section id="phonetics" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-600 section-heading mb-6">1. Phonetics Basics: Sounds of American English</h2>
+            <p class="text-lg mb-6">Understanding the individual sounds is the foundation of a clear accent. We'll cover vowels and consonants, often using the International Phonetic Alphabet (IPA) for precision.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">American English Vowels</h3>
+                    <p class="mb-4">American English has a rich system of vowel sounds. Pay close attention to mouth position and tongue placement.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong class="text-blue-500">Long A</strong> as in "cake" /eɪ/
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_long_a')">Play</button>
+                                <audio id="audio_long_a" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "cake")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">Short A</strong> as in "cat" /æ/
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_short_a')">Play</button>
+                                <audio id="audio_short_a" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "cat")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">Long E</strong> as in "green" /iː/
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_long_e')">Play</button>
+                                <audio id="audio_long_e" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "green")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">Short I</strong> as in "sit" /ɪ/
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_short_i')">Play</button>
+                                <audio id="audio_short_i" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "sit")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">Open O</strong> as in "hot" /ɑː/
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_open_o')">Play</button>
+                                <audio id="audio_open_o" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "hot")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">Schwa</strong> as in "about" /ə/ (the most common vowel sound!)
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_schwa')">Play</button>
+                                <audio id="audio_schwa" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "about")</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="mt-4 text-sm text-gray-500">
+                        <em>Note: Replace 'placeholder.mp3' with actual audio files for each sound.</em>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">American English Consonants</h3>
+                    <p class="mb-4">Many consonants are similar to other languages, but some have distinct American pronunciations.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong class="text-blue-500">"R" sound</strong> as in "car" /r/ (retroflex R)
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_r_sound')">Play</button>
+                                <audio id="audio_r_sound" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "car")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">"T" sound</strong> (flapped T) as in "water" /ɾ/
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_flapped_t')">Play</button>
+                                <audio id="audio_flapped_t" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "water")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">Voiced "TH"</strong> as in "this" /ð/
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_voiced_th')">Play</button>
+                                <audio id="audio_voiced_th" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "this")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">Voiceless "TH"</strong> as in "think" /θ/
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_voiceless_th')">Play</button>
+                                <audio id="audio_voiceless_th" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "think")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">"L" sound</strong> (light vs. dark L) as in "light" vs. "ball" /l/, /ɫ/
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_l_sound')">Play</button>
+                                <audio id="audio_l_sound" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "light", "ball")</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="mt-4 text-sm text-gray-500">
+                        <em>Note: Replace 'placeholder.mp3' with actual audio files for each sound.</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="intonation" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-600 section-heading mb-6">2. Intonation and Stress: The Music of English</h2>
+            <p class="text-lg mb-6">Beyond individual sounds, how you stress words and vary your pitch (intonation) significantly impacts clarity and meaning in American English.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Word Stress</h3>
+                    <p class="mb-4">In multi-syllable words, one syllable is always stressed more than others. This is crucial for natural pronunciation.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong class="text-blue-500">PRO-gress</strong> (noun) vs. pro-<strong class="text-blue-500">GRESS</strong> (verb)
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_word_stress_progress')">Play</button>
+                                <audio id="audio_word_stress_progress" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "PRO-gress", "pro-GRESS")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">PRE-sent</strong> (noun) vs. pre-<strong class="text-blue-500">SENT</strong> (verb)
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_word_stress_present')">Play</button>
+                                <audio id="audio_word_stress_present" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "PRE-sent", "pre-SENT")</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="mt-4 text-sm text-gray-500">
+                        <em>Tip: Use a dictionary to check word stress if unsure.</em>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Sentence Stress & Rhythm</h3>
+                    <p class="mb-4">American English is a stress-timed language, meaning stressed syllables occur at roughly equal intervals. Content words (nouns, verbs, adjectives, adverbs) are usually stressed.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>"I <strong class="text-blue-500">WANT</strong> to <strong class="text-blue-500">GO</strong> to the <strong class="text-blue-500">STORE</strong>."
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_sentence_stress_store')">Play</button>
+                                <audio id="audio_sentence_stress_store" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "I WANT to GO to the STORE.")</span>
+                            </div>
+                        </li>
+                        <li>Rising Intonation for Questions: "Are you <strong class="text-blue-500">READY</strong>?" (pitch goes up)
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_rising_intonation')">Play</button>
+                                <audio id="audio_rising_intonation" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "Are you READY?")</span>
+                            </div>
+                        </li>
+                        <li>Falling Intonation for Statements: "I am <strong class="text-blue-500">READY</strong>." (pitch goes down)
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_falling_intonation')">Play</button>
+                                <audio id="audio_falling_intonation" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "I am READY.")</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="mt-4 text-sm text-gray-500">
+                        <em>Practice identifying the stressed words in sentences.</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="connected-speech" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-600 section-heading mb-6">3. Connected Speech: Speaking Naturally</h2>
+            <p class="text-lg mb-6">When native speakers talk, words often blend together. Understanding these phenomena will make your speech sound more natural.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Linking</h3>
+                    <p class="mb-4">Words often link together, especially when one ends with a consonant and the next starts with a vowel.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>"pick up" sounds like "pi-<strong class="text-blue-500">kup</strong>"
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_linking_pickup')">Play</button>
+                                <audio id="audio_linking_pickup" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "pick up")</span>
+                            </div>
+                        </li>
+                        <li>"turn off" sounds like "tur-<strong class="text-blue-500">noff</strong>"
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_linking_turnoff')">Play</button>
+                                <audio id="audio_linking_turnoff" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "turn off")</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Reductions & Assimilation</h3>
+                    <p class="mb-4">Unstressed words or syllables often get reduced, and sounds can change due to neighboring sounds.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>"going to" often reduces to "<strong class="text-blue-500">gonna</strong>"
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_reduction_gonna')">Play</button>
+                                <audio id="audio_reduction_gonna" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "going to" vs "gonna")</span>
+                            </div>
+                        </li>
+                        <li>"want to" often reduces to "<strong class="text-blue-500">wanna</strong>"
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_reduction_wanna')">Play</button>
+                                <audio id="audio_reduction_wanna" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "want to" vs "wanna")</span>
+                            </div>
+                        </li>
+                        <li>"did you" often sounds like "<strong class="text-blue-500">didja</strong>" (assimilation)
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_assimilation_didja')">Play</button>
+                                <audio id="audio_assimilation_didja" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "did you" vs "didja")</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-600 section-heading mb-6">4. Common Pronunciation Challenges</h2>
+            <p class="text-lg mb-6">Many learners face specific challenges with certain sounds. Here are some common ones and how to tackle them.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">The American "R" vs. "L"</h3>
+                    <p class="mb-4">Distinguishing between the retroflex 'R' and the 'L' (especially dark L) can be tricky.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong class="text-blue-500">R:</strong> Tongue pulls back and up, not touching the roof of the mouth. (e.g., "right", "read")
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_challenge_r')">Play</button>
+                                <audio id="audio_challenge_r" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "right", "read")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">L:</strong> Tongue tip touches the ridge behind your front teeth. (e.g., "light", "leader")
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_challenge_l')">Play</button>
+                                <audio id="audio_challenge_l" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "light", "leader")</span>
+                            </div>
+                        </li>
+                        <li>Practice minimal pairs: "light" vs. "right", "collect" vs. "correct"
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_challenge_rl_pairs')">Play</button>
+                                <audio id="audio_challenge_rl_pairs" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "light/right", "collect/correct")</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">The "TH" Sounds (Voiced and Voiceless)</h3>
+                    <p class="mb-4">These sounds require placing your tongue between your teeth.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong class="text-blue-500">Voiceless TH</strong> /θ/: Air flows, no vibration in throat. (e.g., "think", "three")
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_challenge_voiceless_th')">Play</button>
+                                <audio id="audio_challenge_voiceless_th" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "think", "three")</span>
+                            </div>
+                        </li>
+                        <li><strong class="text-blue-500">Voiced TH</strong> /ð/: Air flows, vibration in throat. (e.g., "this", "they")
+                            <div class="audio-player">
+                                <button onclick="playAudio('audio_challenge_voiced_th')">Play</button>
+                                <audio id="audio_challenge_voiced_th" src="placeholder.mp3"></audio>
+                                <span>(Placeholder: "this", "they")</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="practice" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-600 section-heading mb-6">5. Practice Exercises</h2>
+            <p class="text-lg mb-6">Consistent practice is key to improving your accent. Here are some ways to practice:</p>
+
+            <div class="card">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Listen and Repeat</h3>
+                <p class="mb-4">Listen carefully to native speakers and try to imitate their pronunciation, intonation, and rhythm as closely as possible.</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong class="text-blue-500">Shadowing:</strong> Listen to a short audio clip and try to speak along with it, mimicking every detail.</li>
+                    <li><strong class="text-blue-500">Minimal Pairs:</strong> Practice words that differ by only one sound (e.g., "ship" vs. "sheep").</li>
+                </ul>
+                <div class="audio-player">
+                    <button onclick="playAudio('audio_practice_sentence')">Play Example Sentence</button>
+                    <audio id="audio_practice_sentence" src="placeholder.mp3"></audio>
+                    <span>(Placeholder: "The quick brown fox jumps over the lazy dog.")</span>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">
+                    <em>Future Enhancement: Implement a "record yourself" feature here!</em>
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tongue Twisters</h3>
+                <p class="mb-4">These are fun ways to practice specific sounds and improve articulation.</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>"Peter Piper picked a peck of pickled peppers."
+                        <div class="audio-player">
+                            <button onclick="playAudio('audio_tongue_twister1')">Play</button>
+                            <audio id="audio_tongue_twister1" src="placeholder.mp3"></audio>
+                            <span>(Placeholder: "Peter Piper...")</span>
+                        </div>
+                    </li>
+                    <li>"She sells seashells by the seashore."
+                        <div class="audio-player">
+                            <button onclick="playAudio('audio_tongue_twister2')">Play</button>
+                            <audio id="audio_tongue_twister2" src="placeholder.mp3"></audio>
+                            <span>(Placeholder: "She sells seashells...")</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="resources" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-600 section-heading mb-6">6. Additional Resources</h2>
+            <p class="text-lg mb-6">Explore these external resources to further enhance your learning journey.</p>
+
+            <div class="card">
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li><a href="https://www.youtube.com/results?search_query=american+accent+training" target="_blank" class="text-blue-600 hover:underline font-medium">YouTube Channels for Accent Training</a> - Search for channels like "Rachel's English" or "Accent's Way".</li>
+                    <li><a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet" target="_blank" class="text-blue-600 hover:underline font-medium">International Phonetic Alphabet (IPA) Explained</a> - Wikipedia page for detailed IPA charts.</li>
+                    <li><a href="https://www.englishclub.com/pronunciation/minimal-pairs.htm" target="_blank" class="text-blue-600 hover:underline font-medium">English Club - Minimal Pairs</a> - Practice distinguishing similar sounds.</li>
+                    <li><a href="https://www.audible.com/" target="_blank" class="text-blue-600 hover:underline font-medium">Audible.com</a> - Listen to audiobooks narrated by American speakers.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 mt-12 text-center rounded-t-xl">
+        <p>&copy; 2025 American Accent Mastery. All rights reserved. Designed for your journey from Zero to Hero!</p>
+    </footer>
+
+    <script>
+        // Function to play audio
+        function playAudio(audioId) {
+            const audio = document.getElementById(audioId);
+            if (audio) {
+                audio.play().catch(e => console.error("Error playing audio:", e));
+            } else {
+                console.warn(`Audio element with ID '${audioId}' not found.`);
+            }
+        }
+
+        // Function to scroll to a section smoothly
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Add event listeners for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+            });
+        });
+    </script>
+</body>
+</html>
